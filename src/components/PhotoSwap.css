@@ -1,0 +1,42 @@
+.photo-swap-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .photo-display {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    margin: 0 20px;
+  }
+  
+  .photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .prev-button, .next-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .prev-button:disabled, .next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .prev-button:hover:not(:disabled), .next-button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  

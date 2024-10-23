@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Header Section Styling */
+  .header-image {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .header-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .heading-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Introduction Section */
+  .intro {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .intro p {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  /* Activities Section */
+  .activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .activity-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .activity {
+    background-color: #fff;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .activity h3 {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .activity p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .activity img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,111 @@
+/* Teacher.css */
+
+.home-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  .home-header {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding around the header */
+    text-align: center; /* Center the text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.home-header h1 {
+    font-size: 2.5rem; /* Large font size for the heading */
+    margin: 0; /* Remove default margin */
+    font-family: 'Arial', sans-serif; /* Font family for the heading */
+}
+
+.home-header p {
+    font-size: 1.25rem; /* Font size for the paragraph */
+    margin: 10px 0 0; /* Add margin above and remove default margin below */
+    line-height: 1.5; /* Increase line height for readability */
+}.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature-box {
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside each box */
+    margin: 10px; /* Margin around each box */
+    width: 200px; /* Fixed width for boxes */
+    text-align: center; /* Centered text */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.feature-link {
+    text-decoration: none; /* Remove underline from links */
+     /* Inherit color from parent */
+}
+
+.feature-box:hover {
+    background-color: #e0e0e0; /* Darker gray on hover */
+}
+
+
+  
+  .home-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .home-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .home-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .features-section {
+    margin-bottom: 30px;
+  }
+  
+  .features-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature h3 {
+    color: #007bff;
+  }
+  
+  .home-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+  }
+  
+  .home-footer a {
+    color: #007bff;
+  }
+  

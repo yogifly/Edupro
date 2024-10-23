@@ -1,0 +1,97 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  
+  .image-section {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .image-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  
+  .content-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  
+  .content-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  
+ 
+  .zoom-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .zoom-buttons button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .zoom-buttons button:hover {
+    background-color: #ff4500;
+  }
+  
+  
+  .upcoming-events {
+    text-align: center;
+  }
+  
+  .upcoming-events img {
+    margin-top: 20px;
+  }
+  
+ 
+  .daily-schedule {
+    text-align: center;
+  }
+  
+  .daily-schedule img {
+    margin-top: 20px;
+  }
+  
+
+  .lunch-timetable {
+    text-align: center;
+  }
+  
+  .lunch-timetable img {
+    margin-top: 20px;
+  }
+  
