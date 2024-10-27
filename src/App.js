@@ -11,6 +11,12 @@ import FileUpload from './components/FileUpload';
 import FileDisplay from './components/FileDisplay';
 import Academics from './components/Academics';
 import HomeActivities from './components/HomeActivities';
+import TeacherView from './components/TeacherView';
+import StudentView from './components/StudentView';
+import PaymentPage from './components/PaymentPage';
+import DrawingApp from './components/DrawingApp';
+import AddStudent from './components/AddStudent';
+
 
 function App() {
   return (
@@ -28,7 +34,13 @@ function App() {
           <Route path="/files" element={<FileDisplay />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/activities" element={<HomeActivities />} />
-          
+          <Route path="/communication" element={<TeacherView />} />
+          <Route path="/student" element={<StudentView />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/drawing" element={<DrawingApp />} />
+          <Route path="/add-student" element={<AddStudent />} />
+         
+
         </Routes>
       </div>
     </Router>

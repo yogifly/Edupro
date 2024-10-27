@@ -1,47 +1,24 @@
-.progress-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ccc;
-    transition: background-color 0.3s ease;
-    margin-bottom: 5px;
-  }
-  
-  .dot.completed {
-    background-color: #4caf50;
-  }
-  
-  .step-label {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 5px;
-  }
-  
-  .step:not(:last-child)::after {
-    content: '';
-    width: 50px;
-    height: 2px;
-    background-color: #ccc;
-    position: absolute;
-    top: 9px;
-    left: 100%;
-    z-index: -1;
-  }
-  
-  .completed + .step:not(:last-child)::after {
-    background-color: #4caf50;
-  }
-  
+/* PhotoSwap.css */
+
+.photo-swap-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px; /* Adjust width as needed */
+  margin: 20px auto;
+}
+
+.photo-display {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for styling */
+}
+
+.photo-display img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Consistent rounding for images */
+  object-fit: cover;
+  transition: opacity 0.5s ease; /* Smooth transition between photos */
+}

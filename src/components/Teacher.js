@@ -42,10 +42,10 @@ const Teacher = () => {
         </div>
         
         <div className="feature-box payments">
-          <a href="/payment" className="feature-link">
+          <a href="/add-student" className="feature-link">
             <span className="icon">💳</span>
-            <h3>Secure Payments</h3>
-            <p>Upload payment fees</p>
+            <h3>Add Students </h3>
+            <p>List of Students</p>
           </a>
         </div>
       </section>

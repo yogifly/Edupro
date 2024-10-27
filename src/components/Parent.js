@@ -1,5 +1,6 @@
 import React from 'react';
  // Import the CSS file
+ import './Parent.css';
 
 const Parent = () => {
   return (
@@ -8,10 +9,14 @@ const Parent = () => {
         <h1>Welcome Parents!</h1>
         <p>Your partner in your child's education journey.</p>
       </header>
-
+      <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br /> 
+    
       <section className="features">
         <div className="feature-box communication">
-          <a href="/communication" className="feature-link">
+          <a href="/student" className="feature-link">
             <span className="icon">📞</span>
             <h3>Communication Tools</h3>
             <p>Connect easily with parents and staff.</p>
@@ -47,6 +52,14 @@ const Parent = () => {
             <span className="icon">💳</span>
             <h3>Secure Payments</h3>
             <p>Pay school fees online with ease.</p>
+          </a>
+        </div>
+
+        <div className="feature-box resources">
+          <a href="/drawing" className="feature-link">
+            <span className="icon">📚</span>
+            <h3>Drawing board</h3>
+            <p>Drawing .</p>
           </a>
         </div>
       </section>

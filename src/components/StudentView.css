@@ -1,0 +1,78 @@
+/* StudentView.css */
+
+.student-view-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-view-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .student-view-container h3 {
+    color: #555;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  /* StudentView.css */
+
+.student-view-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-view-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .student-view-container h3 {
+    color: #555;
+  }
+  
+  .media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between media items */
+  }
+  
+  .media-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align */
+  }
+  
+  audio,
+  video {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit width */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
