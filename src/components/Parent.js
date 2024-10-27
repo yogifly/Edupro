@@ -1,6 +1,6 @@
 import React from 'react';
- // Import the CSS file
- import './Parent.css';
+;// Import the CSS file
+
 
 const Parent = () => {
   return (

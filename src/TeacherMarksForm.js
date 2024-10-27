@@ -75,7 +75,9 @@ const TeacherMarksForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container"><br /><br /><br /> 
+    <br /><br /><br />
+    
       <h2>Std - Junior Marks & Grades</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">

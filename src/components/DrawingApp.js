@@ -68,9 +68,13 @@ const DrawingApp = () => {
     if (!isDrawing) return;
     ctx.current.putImageData(snapshot, 0, 0);
     ctx.current.strokeStyle = selectedTool === 'eraser' ? '#fff' : selectedColor;
-    ctx.current.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
-    ctx.current.stroke();
-    
+
+    if (selectedTool === 'brush' || selectedTool === 'eraser') {
+      ctx.current.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
+      ctx.current.stroke();
+    }
+
+    // Draw shapes only once on mouse move
     if (selectedTool === 'rectangle') {
       drawRect(e);
     } else if (selectedTool === 'circle') {

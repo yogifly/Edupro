@@ -16,26 +16,29 @@ body {
   background: #47289d;
 }
 
+/* Ensure the container takes up full width */
 .container {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
-  gap: 20px;
+  max-width: 1200px; /* Limit max width */
   padding: 20px;
-  max-width: 1200px;
+  gap: 20px;
 }
 
+/* Styling for sections */
 section {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  flex-basis: 260px; /* Set fixed width for tool section */
 }
 
 /* Tools Board Styling */
 .tools-board {
-  width: 260px;
+  width: 100%;
   padding: 15px;
 }
 
@@ -72,14 +75,15 @@ section {
 }
 
 .option.tool {
-  flex-basis: 48%;
+  flex-basis: 48%; /* Adjusts the size of the tool options */
   text-align: center;
   border: 1px solid #ddd;
   padding: 10px;
   justify-content: center;
 }
 
-.option.tool:hover, .option.tool.active {
+.option.tool:hover,
+.option.tool.active {
   background: #f0f8ff;
   border-color: #4A98F7;
 }
@@ -89,7 +93,8 @@ section {
   height: 24px;
 }
 
-.option label, .option span {
+.option label,
+.option span {
   color: #5A6168;
   font-size: 0.9rem;
 }
@@ -170,7 +175,7 @@ section {
 
 /* Drawing Board */
 .drawing-board {
-  flex: 1;
+  flex: 1; /* Allow the drawing board to grow */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,8 +183,8 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 600px;
-  max-width: 800px;
+  height: 600px; /* Adjusted height */
+  max-width: 800px; /* Limit max width */
   background-color: #fff;
 }
 
