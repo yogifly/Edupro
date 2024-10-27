@@ -24,7 +24,7 @@ const Parent = () => {
         </div>
         
         <div className="feature-box tracking">
-          <a href="/tracking" className="feature-link">
+          <a href="/progress" className="feature-link">
             <span className="icon">📈</span>
             <h3>Student Progress Tracking</h3>
             <p>Monitor attendance and grades weekly.</p>
@@ -62,6 +62,7 @@ const Parent = () => {
             <p>Drawing .</p>
           </a>
         </div>
+        
       </section>
 
 

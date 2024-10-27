@@ -18,20 +18,35 @@ body {
 
 .container {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
   width: 100%;
-  gap: 10px;
-  padding: 10px;
-  max-width: 1200px; /* Increased max width */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
 }
 
 section {
   background: #fff;
-  border-radius: 7px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
+/* Tools Board Styling */
 .tools-board {
-  width: 210px;
-  padding: 15px 22px 0;
+  width: 260px;
+  padding: 15px;
+}
+
+.tools-board .title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  width: 100%;
 }
 
 .tools-board .row {
@@ -40,30 +55,43 @@ section {
 
 .row .options {
   list-style: none;
-  margin: 10px 0 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .row .options .option {
   display: flex;
-  cursor: pointer;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-.option:is(:hover, .active) img {
-  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
-  width: 24px; /* Set width for icons */
-  height: 24px; /* Set height for icons */
-}
-
-.option :where(span, label) {
-  color: #5A6168;
+  gap: 10px;
   cursor: pointer;
-  padding-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-.option:is(:hover, .active) :where(span, label) {
-  color: #4A98F7;
+.option.tool {
+  flex-basis: 48%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  justify-content: center;
+}
+
+.option.tool:hover, .option.tool.active {
+  background: #f0f8ff;
+  border-color: #4A98F7;
+}
+
+.option img {
+  width: 24px;
+  height: 24px;
+}
+
+.option label, .option span {
+  color: #5A6168;
+  font-size: 0.9rem;
 }
 
 .option #fill-color {
@@ -72,61 +100,35 @@ section {
   width: 14px;
 }
 
-#fill-color:checked ~ label {
-  color: #4A98F7;
-}
-
 .option #size-slider {
   width: 100%;
-  height: 5px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .colors .options {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .colors .option {
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   border-radius: 50%;
-  margin-top: 3px;
   position: relative;
-}
-
-.colors .option:nth-child(1) {
-  background-color: #fff;
-  border: 1px solid #bfbfbf;
-}
-
-.colors .option:nth-child(2) {
-  background-color: #000;
-}
-
-.colors .option:nth-child(3) {
-  background-color: #E02020;
-}
-
-.colors .option:nth-child(4) {
-  background-color: #6DD400;
-}
-
-.colors .option:nth-child(5) {
-  background-color: #4A98F7;
+  cursor: pointer;
 }
 
 .colors .option.selected::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 50%;
   left: 50%;
-  height: 12px;
-  width: 12px;
-  background: inherit;
-  border-radius: inherit;
-  border: 2px solid #fff;
   transform: translate(-50%, -50%);
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: inherit;
 }
 
 .colors .option:first-child.selected::before {
@@ -142,40 +144,46 @@ section {
   width: 100%;
   color: #fff;
   border: none;
-  outline: none;
-  padding: 11px 0;
+  padding: 10px;
   font-size: 0.9rem;
-  margin-bottom: 13px;
-  background: none;
-  border-radius: 4px;
+  margin-top: 10px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .buttons .clear-canvas {
-  color: #6C757D;
-  border: 1px solid #6C757D;
-  transition: all 0.3s ease;
+  background-color: #6C757D;
 }
 
 .clear-canvas:hover {
-  color: #fff;
-  background: #6C757D;
+  background-color: #5a6268;
 }
 
 .buttons .save-img {
-  background: #4A98F7;
-  border: 1px solid #4A98F7;
+  background-color: #4A98F7;
 }
 
+.save-img:hover {
+  background-color: #357ABD;
+}
+
+/* Drawing Board */
 .drawing-board {
   flex: 1;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 600px; /* Increase drawing board height */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 600px;
+  max-width: 800px;
+  background-color: #fff;
 }
 
 .drawing-board canvas {
   width: 100%;
   height: 100%;
-  border: 1px solid #ccc; /* Optional: Add a border to the canvas */
 }

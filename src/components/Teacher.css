@@ -1,111 +1,105 @@
 /* Teacher.css */
 
 .home-container {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  .home-header {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
-    padding: 40px 20px; /* Padding around the header */
-    text-align: center; /* Center the text */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  font-family: Arial, sans-serif;
+  max-width: 1000px; /* Increased width for more spacious layout */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f6f9; /* Light gray background */
+}
+
+.home-header {
+  background-color: #4CAF50; /* Green background color */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow for more depth */
 }
 
 .home-header h1 {
-    font-size: 2.5rem; /* Large font size for the heading */
-    margin: 0; /* Remove default margin */
-    font-family: 'Arial', sans-serif; /* Font family for the heading */
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
 .home-header p {
-    font-size: 1.25rem; /* Font size for the paragraph */
-    margin: 10px 0 0; /* Add margin above and remove default margin below */
-    line-height: 1.5; /* Increase line height for readability */
-}.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+/* Features Section */
+.features-section {
+  margin: 40px 0; /* Spacing above and below */
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between boxes */
+  padding: 0 10px;
 }
 
 .feature-box {
-    background-color: #f0f0f0; /* Light gray background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside each box */
-    margin: 10px; /* Margin around each box */
-    width: 200px; /* Fixed width for boxes */
-    text-align: center; /* Centered text */
-    transition: background-color 0.3s; /* Smooth background transition */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  width: calc(33.33% - 20px); /* Responsive width, fixed space for 3 columns */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease; /* Smooth background and shadow transition */
+}
+
+.feature-box h3 {
+  color: #4CAF50; /* Green color to match header */
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .feature-link {
-    text-decoration: none; /* Remove underline from links */
-     /* Inherit color from parent */
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.feature-link:hover {
+  color: #0056b3; /* Darker blue on hover */
 }
 
 .feature-box:hover {
-    background-color: #e0e0e0; /* Darker gray on hover */
+  background-color: #f0f7f4; /* Light green tint on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
 }
 
+/* Footer */
+.home-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+}
 
-  
-  .home-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .home-header h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .home-header p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .features-section {
-    margin-bottom: 30px;
-  }
-  
-  .features-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .feature {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    width: 30%;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .feature h3 {
-    color: #007bff;
-  }
-  
-  .home-footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #666;
-  }
-  
-  .home-footer a {
-    color: #007bff;
-  }
-  
+.home-footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.home-footer a:hover {
+  color: #0056b3;
+}

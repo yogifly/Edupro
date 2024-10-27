@@ -1,0 +1,131 @@
+/* General Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Header Section */
+  header .header-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .header-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .heading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .heading-overlay h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Introduction Section */
+  .intro {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Activities Section */
+  .activities {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .activity-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .activity {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .activity h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .activity p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .activity img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .activity-row {
+      flex-direction: column;
+    }
+  
+    .activity {
+      width: 100%;
+    }
+  }
+  

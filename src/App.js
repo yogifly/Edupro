@@ -16,6 +16,8 @@ import StudentView from './components/StudentView';
 import PaymentPage from './components/PaymentPage';
 import DrawingApp from './components/DrawingApp';
 import AddStudent from './components/AddStudent';
+import TeacherMarksForm from './TeacherMarksForm';
+import ParentProgressBar from './ParentProgressBar';
 
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/drawing" element={<DrawingApp />} />
           <Route path="/add-student" element={<AddStudent />} />
+          <Route path="/add-marks" element={<TeacherMarksForm />} />
+          <Route path="/progress" element={<ParentProgressBar />} />
          
 
         </Routes>

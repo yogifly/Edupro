@@ -1,62 +1,24 @@
 import React from 'react';
-import './Activities.css';
+import './HomeActivities.css';
 
 const HomeActivities = () => {
   return (
-    <div><br /><br />
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br /> 
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br /><br /> 
-    <br /><br /><br /> 
-    <br /><br /><br />
-    <br /><br /><br /> 
-    <br /><br /><br />
-    <br /><br /><br />
-    <br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br /> 
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br /> 
-      <br /><br /><br /> 
-      <br /><br /><br />
-      <br /><br /><br /> 
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br /> 
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br /> 
-      <br /><br /><br /> 
-      <br /><br /><br />
-      <br /><br /><br /> 
-      <br /><br /><br />
-      <br /><br /><br />
-      
-      
-    
+    <div><br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br><br></br>
       {/* Header Section with Image and Heading */}
       <header>
         <div className="header-image">

@@ -7,6 +7,10 @@ const Teacher = () => {
         <h1>Welcome Teachers!</h1>
         <p>Your support in shaping young minds.</p>
       </header>
+      <br /><br /><br />
+      <br /><br /><br /> 
+      <br /><br /><br />
+      <br /><br /><br />
 
       <section className="features">
         <div className="feature-box communication">
@@ -46,6 +50,14 @@ const Teacher = () => {
             <span className="icon">💳</span>
             <h3>Add Students </h3>
             <p>List of Students</p>
+          </a>
+        </div>
+
+        <div className="feature-box payments">
+          <a href="/add-marks" className="feature-link">
+            <span className="icon">💳</span>
+            <h3>Add Marks and Grades</h3>
+            <p> Students Report</p>
           </a>
         </div>
       </section>
