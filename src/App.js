@@ -16,8 +16,8 @@ import StudentView from './components/StudentView';
 import PaymentPage from './components/PaymentPage';
 import DrawingApp from './components/DrawingApp';
 import AddStudent from './components/AddStudent';
-import TeacherMarksForm from './TeacherMarksForm';
-import ParentProgressBar from './ParentProgressBar';
+import TeacherMarksForm from './components/TeacherMarksForm';
+import ParentProgressBar from './components/ParentProgressBar';
 
 
 function App() {

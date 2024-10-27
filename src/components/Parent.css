@@ -1,5 +1,5 @@
-/* General container styles */
-.home-container {
+/* Parent.css */
+.parent-container {
   font-family: Arial, sans-serif;
   color: #333;
   display: flex;
@@ -8,100 +8,68 @@
   padding: 20px;
 }
 
-/* Header styles */
-.home-header {
+.parent-header {
   text-align: center;
   background-color: #4CAF50;
   color: white;
-  padding: 30px;
+
   border-radius: 8px;
   width: 100%;
   max-width: 800px;
   margin-bottom: 40px;
 }
 
-.home-header h1 {
+.header-title {
   margin: 0;
   font-size: 2rem;
 }
 
-.home-header p {
+.header-subtitle {
   margin-top: 10px;
   font-size: 1.1rem;
 }
 
-/* Features section */
-.features {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+.features-section {
+  display: grid; /* Use grid for layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between items */
   width: 100%;
-  max-width: 1200px;
-  justify-content: center;
+  justify-items: center; /* Center items */
 }
 
-/* Feature Box Styling */
-.feature-box {
+.feature-card {
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   width: 250px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Link and Text Styling */
 .feature-link {
   color: #333;
   text-decoration: none;
 }
 
-.feature-box h3 {
-  margin-top: 10px;
-  font-size: 1.3rem;
-}
-
-.feature-box p {
-  margin: 10px 0 0;
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Icon styles */
-.icon {
+.feature-icon {
   font-size: 3rem;
   display: block;
   margin-bottom: 10px;
 }
 
-/* Individual Feature Colors */
-.communication .icon {
-  color: #e57373;
-}
-.tracking .icon {
-  color: #64b5f6;
-}
-.notices .icon {
-  color: #ffd54f;
-}
-.resources .icon {
-  color: #81c784;
-}
-.payments .icon {
-  color: #ba68c8;
-}
-.drawing-board .icon {
-  color: #4dd0e1;
+.feature-title {
+  margin-top: 10px;
+  font-size: 1.3rem;
 }
 
-/* Footer styles */
-.home-footer {
+.feature-description {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.parent-footer {
   text-align: center;
   margin-top: 30px;
   padding: 10px;
@@ -112,11 +80,15 @@
   border-radius: 8px;
 }
 
-.home-footer p {
+.footer-contact {
   margin: 5px 0;
 }
 
-.home-footer a {
+.footer-email {
   color: #f1f1f1;
   text-decoration: underline;
+}
+
+.footer-rights {
+  margin: 5px 0;
 }

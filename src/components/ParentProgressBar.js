@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from "firebase/firestore";
-import { db } from './firebaseConfig'; // Ensure the path is correct
+import { db } from '../firebaseConfig'; // Ensure the path is correct
 import './ParentProgressBar.css';
 
 const ParentProgressBar = () => {

@@ -1,6 +1,4 @@
-// DrawingApp.js
 import React, { useEffect, useRef, useState } from 'react';
-import './DrawingApp.css'; // Importing CSS for styling
 
 const DrawingApp = () => {
   const canvasRef = useRef(null);
@@ -12,7 +10,7 @@ const DrawingApp = () => {
   const [brushWidth, setBrushWidth] = useState(5);
   const [selectedColor, setSelectedColor] = useState('#000');
   const fillColorRef = useRef(null);
-  
+
   // Get the canvas context
   const ctx = useRef(null);
 
@@ -32,9 +30,10 @@ const DrawingApp = () => {
 
   const drawRect = (e) => {
     if (!fillColorRef.current.checked) {
-      return ctx.current.strokeRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, prevMouseX - e.nativeEvent.offsetX, prevMouseY - e.nativeEvent.offsetY);
+      ctx.current.strokeRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, prevMouseX - e.nativeEvent.offsetX, prevMouseY - e.nativeEvent.offsetY);
+    } else {
+      ctx.current.fillRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, prevMouseX - e.nativeEvent.offsetX, prevMouseY - e.nativeEvent.offsetY);
     }
-    ctx.current.fillRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, prevMouseX - e.nativeEvent.offsetX, prevMouseY - e.nativeEvent.offsetY);
   };
 
   const drawCircle = (e) => {
@@ -113,73 +112,97 @@ const DrawingApp = () => {
   };
 
   return (
-    <div className="container">
-      <section className="tools-board">
-        <div className="row">
-          <label className="title">Shapes</label>
-          <ul className="options">
-            <li className={`option tool ${selectedTool === 'rectangle' ? 'active' : ''}`} onClick={() => handleToolChange('rectangle')}>
-              <img src="images/rectangle.jpg" alt="Rectangle" />
-              <span>Rectangle</span>
+    <div className="appContainer" style={{ display: 'flex', fontFamily: 'Arial, sans-serif', height: '100vh' }}>
+      <section className="toolPanel" style={{
+        width: '300px',
+        padding: '20px',
+        backgroundColor: '#f5f5f5',
+        borderRight: '1px solid #ddd',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px'
+      }}>
+        <div className="shapeTools">
+          <label className="sectionTitle" style={{ fontSize: '1.2em', fontWeight: 'bold', marginBottom: '10px' }}>Shapes</label>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li onClick={() => handleToolChange('rectangle')} style={{ cursor: 'pointer', marginBottom: '8px' }}>
+              <img src="images/rectangle.jpg" alt="Rectangle" style={{ width: '24px', marginRight: '8px' }} />
+              Rectangle
             </li>
-            <li className={`option tool ${selectedTool === 'circle' ? 'active' : ''}`} onClick={() => handleToolChange('circle')}>
-              <img src="images/circle.jpg" alt="Circle" />
-              <span>Circle</span>
+            <li onClick={() => handleToolChange('circle')} style={{ cursor: 'pointer', marginBottom: '8px' }}>
+              <img src="images/circle.jpg" alt="Circle" style={{ width: '24px', marginRight: '8px' }} />
+              Circle
             </li>
-            <li className={`option tool ${selectedTool === 'triangle' ? 'active' : ''}`} onClick={() => handleToolChange('triangle')}>
-              <img src="images/triangle.jpg" alt="Triangle" />
-              <span>Triangle</span>
+            <li onClick={() => handleToolChange('triangle')} style={{ cursor: 'pointer', marginBottom: '8px' }}>
+              <img src="images/triangle.jpg" alt="Triangle" style={{ width: '24px', marginRight: '8px' }} />
+              Triangle
             </li>
-            <li className="option">
-              <input type="checkbox" id="fill-color" ref={fillColorRef} />
+            <li>
+              <input type="checkbox" id="fill-color" ref={fillColorRef} style={{ marginRight: '8px' }} />
               <label htmlFor="fill-color">Fill color</label>
             </li>
           </ul>
         </div>
-        <div className="row">
-          <label className="title">Options</label>
-          <ul className="options">
-            <li className={`option tool ${selectedTool === 'brush' ? 'active' : ''}`} onClick={() => handleToolChange('brush')}>
-              <img src="images/brush.jpg" alt="Brush" />
-              <span>Brush</span>
+
+        <div className="drawingOptions">
+          <label className="sectionTitle" style={{ fontSize: '1.2em', fontWeight: 'bold', marginBottom: '10px' }}>Options</label>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li onClick={() => handleToolChange('brush')} style={{ cursor: 'pointer', marginBottom: '8px' }}>
+              <img src="images/brush.jpg" alt="Brush" style={{ width: '24px', marginRight: '8px' }} />
+              Brush
             </li>
-            <li className={`option tool ${selectedTool === 'eraser' ? 'active' : ''}`} onClick={() => handleToolChange('eraser')}>
-              <img src="images/eraser.jpg" alt="Eraser" />
-              <span>Eraser</span>
+            <li onClick={() => handleToolChange('eraser')} style={{ cursor: 'pointer', marginBottom: '8px' }}>
+              <img src="images/eraser.jpg" alt="Eraser" style={{ width: '24px', marginRight: '8px' }} />
+              Eraser
             </li>
-            <li className="option">
-              <input type="range" id="size-slider" min="1" max="30" value={brushWidth} onChange={handleBrushSizeChange} />
+            <li>
+              <input type="range" min="1" max="30" value={brushWidth} onChange={handleBrushSizeChange} style={{ width: '100%' }} />
             </li>
           </ul>
         </div>
-        <div className="row colors">
-          <label className="title">Colors</label>
-          <ul className="options">
+
+        <div className="colorOptions">
+          <label className="sectionTitle" style={{ fontSize: '1.2em', fontWeight: 'bold', marginBottom: '10px' }}>Colors</label>
+          <ul style={{ listStyle: 'none', display: 'flex', gap: '5px', padding: 0 }}>
             {['#000', '#ff0000', '#00ff00', '#0000ff', '#ffff00'].map((color, index) => (
               <li
                 key={index}
-                className={`option ${selectedColor === color ? 'selected' : ''}`}
-                style={{ backgroundColor: color }}
                 onClick={() => handleColorChange(color)}
+                style={{
+                  backgroundColor: color,
+                  width: '24px',
+                  height: '24px',
+                  cursor: 'pointer',
+                  borderRadius: '50%',
+                  border: selectedColor === color ? '2px solid #333' : 'none'
+                }}
               ></li>
             ))}
-            <li className="option">
-              <input type="color" id="color-picker" value={selectedColor} onChange={(e) => handleColorChange(e.target.value)} />
+            <li>
+              <input type="color" value={selectedColor} onChange={(e) => handleColorChange(e.target.value)} />
             </li>
           </ul>
         </div>
-        <div className="row buttons">
-          <button className="clear-canvas" onClick={clearCanvas}>Clear Canvas</button>
-          <button className="save-img" onClick={saveImage}>Save As Image</button>
+
+        <div className="canvasActions" style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
+          <button onClick={clearCanvas} style={{ flex: 1, padding: '10px', backgroundColor: '#ff4d4d', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Clear Canvas</button>
+          <button onClick={saveImage} style={{ flex: 1, padding: '10px', backgroundColor: '#4CAF50', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Save As Image</button>
         </div>
       </section>
-      <section className="drawing-board">
+
+      <section className="canvasContainer" style={{ flex: 1, padding: '20px' }}>
         <canvas
           ref={canvasRef}
           onMouseDown={startDraw}
           onMouseMove={drawing}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
+          style={{
+            border: '1px solid #ccc',
+            width: '100%',
+            height: '500px', // Adjust height as needed
+            backgroundColor: '#fff'
+          }}
         ></canvas>
       </section>
     </div>
